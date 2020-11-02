@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    <script type="text/javascript">
+      (function() {
+        this.bcHostname = 'advancelocal.sb.blueconic.net';
+        var bcScript = document.createElement('script');
+        bcScript.async = true;
+        bcScript.src = 'https://' + this.bcHostname + '/frontend/static/javascript/blueconic/blueconic.min.js';
+        (parent.document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bcScript);
+      })();
+    </script>  
+</head>
 <body>
 
   <h1>The iframe element is below</h1>
 
-  <iframe height="500px" width="500px" title="BC test">
+  <!-- <iframe height="500px" width="500px" title="BC test">
     <script type="text/javascript">
       (function() {
         this.bcHostname = 'advancelocal.sb.blueconic.net';
@@ -15,7 +25,7 @@
         (parent.document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bcScript);
       })();
     </script>
-  </iframe>
+  </iframe> -->
 
   <p>This is a test to see if BC can read outside an iframe</p>
 
