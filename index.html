@@ -441,26 +441,23 @@
         bcScript.async = true;
         bcScript.src = protocol + this.bcHostname + '/frontend/static/javascript/blueconic/blueconic.min.js';
         (parent.document.getElementsByTagName('head')[0] || parent.document.getElementsByTagName('body')[0]).appendChild(bcScript);
-
-        addText();
       })();
-
-      function addText () {
-        setTimeout(() => {
-          document.getElementById('injectOne').innerHTML = 'Optimus';
-        }, 5000);
-        setTimeout(() => {
-          document.getElementById('injectOne').innerHTML = 'Megatron';
-        }, 10000);
-        setTimeout(() => {
-          document.getElementById('injectOne').innerHTML = 'Trailbreaker';
-        }, 15000);
-        }
     </script>
   </iframe>
 
   <p>This is a test to see if BC can read outside an iframe</p>
 
+  <script>
+    setTimeout(() => {
+      document.getElementById('injectOne').innerHTML = 'Optimus';
+    }, 5000);
+    setTimeout(() => {
+      document.getElementById('injectOne').innerHTML = 'Megatron';
+    }, 10000);
+    setTimeout(() => {
+      document.getElementById('injectOne').innerHTML = 'Trailbreaker';
+    }, 15000);
+  </script>
 </body>
 
 </html>
